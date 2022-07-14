@@ -56,7 +56,7 @@ export default function Home() {
 
       <Stack alignItems='center' justifyContent='center' pt={40}>
         <motion.div animate={{ scale: 1.5}} transition={{ duration: 1 }} >
-          <Heading userSelect='none' fontFamily='josefin Sans, sans-serif' fontSize='6xl' color='gray.200' alignSelf='center' >Weather App</Heading>
+          <Heading userSelect='none' fontFamily='josefin Sans, sans-serif' fontSize={{base:'4xl',md:'6xl'}} color='gray.200' alignSelf='center' >Weather App</Heading>
         </motion.div>
         
         <Stack alignItems='center' p={10} gap={10}>
