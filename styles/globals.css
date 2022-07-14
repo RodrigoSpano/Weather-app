@@ -16,3 +16,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.btn-sub {
+  background-color: rgb(245, 245, 245);
+  border-radius: 10px;
+  padding: 0 10px;
+  font-weight: bold;
+  color: cadetblue;
+}

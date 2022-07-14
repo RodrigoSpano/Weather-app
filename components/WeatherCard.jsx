@@ -1,5 +1,4 @@
 import { Flex, Heading, Stack, Text, Image } from '@chakra-ui/react'
-import React from 'react'
 
 const WeatherCard = ({state}) => {
 
@@ -10,22 +9,22 @@ const WeatherCard = ({state}) => {
 
 
   return (
-    <Stack w='sm' h='xs' p={5} bgColor='gray.300' borderRadius={10} alignItems='center'>
-      <Heading as='h2' alignSelf='center'>{state.city}, {state.country}</Heading>
-      <Flex direction='row' gap={5} justifyContent='center'>
-        <Text color='gray.600' fontWeight='bold' >Weather: {state.weatherDesc}</Text>
-        <Text color='gray.600' fontWeight='bold' >Humidity: {state.humidity}%</Text>
-      </Flex>
-      <Flex direction='row'>
-        <Flex direction='column' gap={5} alignItems='left' pt='10'>
-          <Text fontSize='lg' ><strong>temperature:</strong> {state.temp}°C</Text>
-          <Text><strong>min temperature:</strong> {state.temp_min}°C</Text>
-          <Text><strong>max temperature:</strong> {state.temp_max}°C</Text>
+    <Stack w='sm' minH='xs' p={5} bgColor='gray.200' borderRadius={20} alignItems='center' boxShadow='0px 0px 22px -3px rgba(0,0,0,0.8)'>
+        <Heading as='h2' alignSelf='center'>{state.city}, {state.country}</Heading>
+        <Flex direction='row' gap={5} justifyContent='center'>
+          <Text color='gray.600' fontWeight='bold' >Weather: {state.weatherDesc}</Text>
+          <Text color='gray.600' fontWeight='bold' >Humidity: {state.humidity}%</Text>
         </Flex>
-        <Flex w='200px' alignItems='center' justifyContent='center'>
-          <Image src={`/assets/${image}`} alt={state.weather} w='100px' />
+        <Flex direction='row'>
+          <Flex direction='column' gap={5} alignItems='left' pt='5' fontFamily='Comfortaa, cursive'>
+            <Text fontSize='lg' ><strong>temperature:</strong> {state.temp}°C</Text>
+            <Text><strong>min temperature:</strong> {state.temp_min}°C</Text>
+            <Text><strong>max temperature:</strong> {state.temp_max}°C</Text>
+          </Flex>
+          <Flex w='200px' alignItems='center' justifyContent='center'>
+            <Image src={`/assets/${image}`} alt={state.weather} w='100px' />
+          </Flex>
         </Flex>
-      </Flex>
     </Stack>
   )
 }

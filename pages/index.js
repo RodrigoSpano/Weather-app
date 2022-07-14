@@ -1,10 +1,12 @@
-import { Stack } from '@chakra-ui/react'
+import { Heading, Stack } from '@chakra-ui/react'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
+import {motion} from 'framer-motion'
+
 import Form from '../components/Form'
-import Navbar from '../components/Navbar'
 import WeatherCard from '../components/WeatherCard'
 import getApiinfo from '../helper/getApiinfo'
+import Social from '../components/Social'
 
 export default function Home() {
 
@@ -52,12 +54,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-
-      <Navbar />
-      <Stack alignItems='center' p={10} gap={10}>
-        <Form handleSubmit={handleSubmit} />
-        <WeatherCard state={data} />
+      <Stack alignItems='center' justifyContent='center' pt={40}>
+        <motion.div animate={{ scale: 1.5}} transition={{ duration: 1 }} >
+          <Heading fontFamily='josefin Sans, sans-serif' fontSize='6xl' color='gray.200' alignSelf='center' >Weather App</Heading>
+        </motion.div>
+        
+        <Stack alignItems='center' p={10} gap={10}>
+          <Form handleSubmit={handleSubmit} />
+          <WeatherCard state={data} />
+        </Stack>
       </Stack>
+
+      <Social />
+
     </Stack>
   )
 }
