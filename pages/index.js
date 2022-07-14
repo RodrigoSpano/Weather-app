@@ -12,7 +12,6 @@ export default function Home() {
 
   const [data, setData] = useState({
     city:'',
-    country:'',
     humidity:'',
     temp:'',
     temp_max:'',
@@ -29,7 +28,6 @@ export default function Home() {
       setData( {
         ...data,
         city:res.name,
-        country:res.sys.country,
         humidity:res.main.humidity,
         temp:Math.floor(res.main.temp - 270),
         temp_max:Math.floor(res.main.temp_max - 270),

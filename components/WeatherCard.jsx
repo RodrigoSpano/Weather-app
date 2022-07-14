@@ -10,7 +10,7 @@ const WeatherCard = ({state}) => {
 
   return (
     <Stack w={{base:'xs',sm:'sm'}} minH='xs' p={5} bgColor='gray.200' borderRadius={20} alignItems='center' boxShadow='0px 0px 22px -3px rgba(0,0,0,0.8)' userSelect='none' justifyContent='center'>
-        <Heading as='h2' alignSelf='center'>{state.city}, {state.country}</Heading>
+        <Heading as='h2' alignSelf='center'>{state.city}</Heading>
         <Flex direction='row' gap={5} justifyContent='center'>
           <Text color='gray.600' fontWeight='bold' >Weather: {state.weatherDesc}</Text>
           <Text color='gray.600' fontWeight='bold' >Humidity: {state.humidity}%</Text>
