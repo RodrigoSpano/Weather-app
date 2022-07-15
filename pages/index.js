@@ -29,9 +29,9 @@ export default function Home() {
         ...data,
         city:res.name,
         humidity:res.main.humidity,
-        temp:Math.floor(res.main.temp - 270),
-        temp_max:Math.floor(res.main.temp_max - 270),
-        temp_min:Math.floor(res.main.temp_min - 270),
+        temp:Math.floor(res.main.temp - 273),
+        temp_max:Math.floor(res.main.temp_max - 273),
+        temp_min:Math.floor(res.main.temp_min - 273),
         weather:res.weather[0].main,
         weatherDesc:res.weather[0].description,
       } )
